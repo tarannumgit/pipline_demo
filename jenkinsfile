@@ -14,19 +14,7 @@ pipeline
         sh 'echo code is compiling' 
       }
     }
-    stage('approval')
-    {steps
-      { input  "please approve deployment?"}
-    }
-    
-    stage('deployment')
-    {steps
-      { 
-       sh 'echo deployment' 
-      }
-    }
-    
- }   
+
   } //Stages
  }/Pipeline
     
