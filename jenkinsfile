@@ -18,9 +18,9 @@ pipeline
     {input "please enter input?" }
     }
     
-    stage(''deployment)
+    stage('deployment')
     {steps
-     {sh 'deployment' }
+     {sh 'echo deployment' }
      }
 
 
