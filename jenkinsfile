@@ -10,11 +10,21 @@ pipeline
   
     stage('code compile')
     {steps
-      { 
-        sh 'echo code is compiling' 
-      }
+      {   sh 'echo code is compiling'   }
     }
-}
+   
+    stage('get approval')
+    {steps
+    {input "please enter input?" }
+    }
+    
+    stage(''deployment)
+    {steps
+     {sh 'deployment' }
+     }
+
+
+
   } //Stages
  }/Pipeline
     
