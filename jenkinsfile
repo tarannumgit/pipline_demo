@@ -14,7 +14,7 @@ pipeline
         sh 'echo code is compiling' 
       }
     }
-
+}
   } //Stages
  }/Pipeline
     
