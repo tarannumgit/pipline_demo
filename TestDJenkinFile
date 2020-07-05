@@ -24,8 +24,9 @@ pipeline
        stage('please compile code')
 
        { steps {
+       
 
-           withMaven(jdk: 'locakjdk-1.8', maven: 'localmaven') {
+           withMaven(jdk: 'localjdk', maven: 'localMaven') {
 
             sh 'mvn compile'
 
@@ -43,7 +44,7 @@ pipeline
 
        { steps {
 
-           withMaven(jdk: 'locakjdk-1.8', maven: 'localmaven') {
+           withMaven(jdk: 'localjdk', maven: 'localMaven') {
 
             sh 'mvn test'
 
@@ -59,7 +60,7 @@ pipeline
 
        { steps {
 
-           withMaven(jdk: 'locakjdk-1.8', maven: 'localmaven') {
+           withMaven(jdk: 'localjdk', maven: 'localMaven') {
 
             sh 'mvn package'
 
